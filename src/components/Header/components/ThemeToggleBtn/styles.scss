@@ -1,0 +1,14 @@
+ .toggle-theme__btn {
+    height: 35px;
+    width: 35px;
+    background: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 1px 4px rgb(196 195 195);
+    }
+ }

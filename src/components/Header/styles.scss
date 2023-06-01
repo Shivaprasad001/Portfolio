@@ -1,0 +1,14 @@
+@import '../../styles/_mixins.scss';
+
+#header {
+    @include flex-center(center, space-between);
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    
+    padding: 0 40px;
+    height: 80px;
+
+    .header__right-section {
+        @include flex-center(center, space-between);
+    }
+}

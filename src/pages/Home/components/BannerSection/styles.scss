@@ -1,0 +1,22 @@
+.home-page {
+
+    &__section-wrapper {
+        display: flex;
+
+        .left-half {
+
+        }
+
+        .right-half {
+            .profile-picture {
+                width: 280px;
+                height: 280px;
+                border-radius: 50%;
+                overflow: hidden;
+                background-size: cover!important;
+                background-position: center !important;
+                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);  
+            }
+        }
+    }
+}
