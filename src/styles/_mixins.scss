@@ -3,3 +3,11 @@
     display: flex;
     justify-content: $horizontal;
 }
+
+@mixin circles($radius, $fillColor) {
+    background-color: $fillColor;
+    border-radius: 50%;
+    display: block;
+    height: $radius;
+    width: $radius;
+}

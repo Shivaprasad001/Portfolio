@@ -1,13 +1,129 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
 .home-page {
+
+    &__banner {
+        border: 1px solid red;
+        align-items: center;
+        background: linear-gradient(90deg, rgba(125, 124, 124, 0.04) 31.94%, rgba(255, 255, 255, 0) 100%);
+        display: flex;
+        height: calc(100vh - 80px);
+        max-height: 700px;
+        min-height: 500px;
+        position: relative;
+        width: 100%;
+
+        .background-text-wrapper {
+            position: absolute;
+           // background: rgb(206, 206, 206);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+            span {
+                color: rgba(213, 213, 213, 0.29);
+                font-family: $handdrawn-font;
+            }
+        }
+    }
 
     &__section-wrapper {
         display: flex;
+        position: relative;
+        width: 100%;
+        border: 1px solid green;
 
         .left-half {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            .content {
+                #welcome-text {
+                    color: $primary-orange;
+                    font-size: 16px;
+                }
 
+                #name-text {
+                    color: $text-black;
+                    font-size: 40px;
+                    margin: 15px 0;
+                }
+
+                #designation-text {
+                    font-size: 20px;
+                    color: $primary-orange;
+                    margin-bottom: 20px;
+                }
+
+                #description-text {
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: $text-black;
+                    max-width: 350px;
+                }
+
+                .website-links {
+                    margin-top: 35px;
+
+                    ul {
+                        li {
+                            margin-right: 20px;
+                            display: inline-block;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            a {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .right-half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            border: 1px solid green;
+
+            .content {
+                position: relative;
+                background-color: aquamarine;
+                padding: 50px 50px;
+                
+                .circles {
+                    span {
+                        position: absolute;
+
+                        &.orange-dot {
+                            @include circles(20px, #FFA979);
+                        }
+
+                        &.red-dot {
+                            @include circles(20px, #FF7373);
+                        }
+
+                        &.blue-dot {
+                            @include circles(28px, #B7E5FF);
+                        }
+
+                        &.green-dot {
+                            @include circles(11px, #E7F784);
+                        }
+                    }
+                }
+
+                .tech-icons {
+                    span {
+                        position: absolute;
+                    }
+                }
+            }
+
             .profile-picture {
                 width: 280px;
                 height: 280px;

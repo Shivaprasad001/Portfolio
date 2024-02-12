@@ -1,0 +1,21 @@
+@import '../../../../styles/mixins';
+
+.home-page__about {
+    @include flex-center(center, center);
+
+    .half-section {
+        flex: 1;
+    }
+
+    .about {
+        &__right-section {
+            background-color: #abdbdb;
+            @include flex-center(center, center);
+        }
+    }
+
+    .about__coding-img {
+        width: 50%;
+        max-width: 470px;
+    }
+}
