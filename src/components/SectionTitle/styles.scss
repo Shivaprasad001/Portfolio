@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.section-title {
+    .title {
+        font-family: $secondary-font;
+        font-weight: 400;
+        color: $text-black;
+    }
+
+    .border-pattern {
+        display: flex;
+
+        &__line {
+            height: 3px;
+            width: 90px;
+            background: $primary-orange;
+            display: block;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        &__circle {
+            display: block;
+            border-radius: 50%;
+            height: 3px;
+            width: 3px;
+            background-color: $primary-orange;
+            margin-right: 5px;
+        }
+    }
+}

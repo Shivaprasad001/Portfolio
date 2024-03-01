@@ -4,7 +4,7 @@
 .home-page {
 
     &__banner {
-        border: 1px solid red;
+        // border: 1px solid red;
         align-items: center;
         background: linear-gradient(90deg, rgba(125, 124, 124, 0.04) 31.94%, rgba(255, 255, 255, 0) 100%);
         display: flex;
@@ -20,10 +20,71 @@
             width: 100%;
             height: 100%;
             z-index: 0;
+            overflow: hidden;
 
             span {
-                color: rgba(213, 213, 213, 0.29);
+                color: rgba(213, 213, 213, 0.20);
                 font-family: $handdrawn-font;
+                position: absolute;
+
+                &.faded-name {
+                    font-size: 50px;
+                    left: 14%;
+                    top: 53px;
+                }
+
+                &.faded-javascript {
+                    bottom: 66px;
+                    left: 27%;
+                }
+
+                &.faded-web {
+                    top: 40%;
+                    left: 41%;
+                    font-size: 60px;
+                }
+
+                &.faded-css {
+                    right: 7%;
+                    font-size: 38px;
+                    top: 23px;
+                }
+
+                &.faded-algorithm {
+                    bottom: 37px;
+                    right: 7%;
+                    font-size: 40px;
+                }
+
+                &.faded-design {
+                    top: 50%;
+                    right: 25px;
+                    font-size: 26px;
+                }
+
+                &.blurred-circle {
+                    height: 60px;
+                    width: 60px;
+                    background-color: $primary-orange;
+                    border-radius: 50%;
+                    filter: blur(1rem);
+                    opacity: 0.5;
+
+                    &.one {
+                        right: 0;
+                        top: 17px;
+                    }
+
+                    &.two {
+                        bottom: 55px;
+                        right: -31px;
+                    }
+
+                    &.three {
+                        bottom: 0;
+                        left: -15px;
+                    }
+                }
             }
         }
     }
@@ -32,7 +93,7 @@
         display: flex;
         position: relative;
         width: 100%;
-        border: 1px solid green;
+        // border: 1px solid green;
 
         .left-half {
             align-items: center;
@@ -88,11 +149,11 @@
             flex: 1;
             display: flex;
             justify-content: center;
-            border: 1px solid green;
+            // border: 1px solid green;
 
             .content {
                 position: relative;
-                background-color: aquamarine;
+                // background-color: aquamarine;
                 padding: 50px 50px;
                 
                 .circles {
@@ -101,18 +162,26 @@
 
                         &.orange-dot {
                             @include circles(20px, #FFA979);
+                            top: 15px;
+                            right: 134px;
                         }
 
                         &.red-dot {
                             @include circles(20px, #FF7373);
+                            top: 50%;
+                            left: 14px;
                         }
 
                         &.blue-dot {
                             @include circles(28px, #B7E5FF);
+                            bottom: 6px;
+                            left: 45%;
                         }
 
                         &.green-dot {
                             @include circles(11px, #E7F784);
+                            bottom: 27%;
+                            right: 36px;
                         }
                     }
                 }
@@ -120,6 +189,36 @@
                 .tech-icons {
                     span {
                         position: absolute;
+
+                        &.html-icon {
+                            top: 35px;
+                            left: 25px;
+                        }
+
+                        &.code-icon {
+                            top: 15px;
+                            left: 140px;
+                        }
+
+                        &.css-icon {
+                            top: 33px;
+                            right: 40px;
+                        }
+
+                        &.js-icon {
+                            bottom: 30px;
+                            left: 50px;
+                        }
+
+                        &.node-icon {
+                            right: 50px;
+                            bottom: 40px;
+                        }
+
+                        &.react-icon {
+                            right: 3px;
+                            top: 50%;
+                        }
                     }
                 }
             }

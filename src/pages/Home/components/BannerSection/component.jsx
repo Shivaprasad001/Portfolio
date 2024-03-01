@@ -12,12 +12,15 @@ export default function BannerSection() {
     return (
         <section className="home-page__banner">
             <div className="background-text-wrapper">
-                <span>Shivprasad</span>
-                <span>JavaScript</span>
-                <span>Web</span>
-                <span>Css</span>
-                <span>Design</span>
-                <span>Algorithm</span>
+                <span className="faded-name">Shivprasad</span>
+                <span className="faded-javascript">JavaScript</span>
+                <span className="faded-web">Web</span>
+                <span className="faded-css">Css</span>
+                <span className="faded-design">Design</span>
+                <span className="faded-algorithm">Algorithm</span>
+                <span className="blurred-circle one"></span>
+                <span className="blurred-circle two"></span>
+                <span className="blurred-circle three"></span>
             </div>
             <div className="home-page__section-wrapper section-padding">
                 <div className="left-half">

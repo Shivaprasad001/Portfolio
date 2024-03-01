@@ -1,16 +1,92 @@
 @import '../../../../styles/mixins';
-
+@import '../../../../styles/variables';
 .home-page__about {
-    @include flex-center(center, center);
+    display: flex;
+    position: relative;
+    padding-bottom: 0;
 
     .half-section {
         flex: 1;
+
+        .section-content {
+            margin-top: 30px;
+
+            h3 {
+                color: $text-dark;
+                font-weight: 500;
+                font-size: 24px;
+            }
+
+            .about__desc {
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: 200;
+                color: $text-black;
+            }
+
+            .download-cv-button {
+                height: 44px;
+                background-color: transparent;
+                border: 2px solid $primary-orange;
+                color: $primary-orange;
+                padding: 0 20px;
+                font-size: 16px;
+                font-family: $primary-font;
+                margin-top: 35px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            .experience {
+                display: flex;
+                justify-content: end;
+                padding-right: 40px;
+            }
+
+            .about-section-tile {
+                border: 1px solid $border-light;
+                display: inline-block;
+                border-radius: 6px;
+                padding: 10px;
+                height: 107px;
+                width: 137px;
+                box-shadow: 0px 0px 10px rgba(230, 230, 230, 0.5);
+
+                &:first-child {
+                    margin-right: 30px;
+                }
+
+                .tile-count {
+                    font-size: 48px;
+                    color: $primary-orange;
+                    display: block;
+                    text-align: center;
+                }
+
+                .tile-label {
+                    color: $text-light-grey;
+                    display: block;
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .blurred-circle {
+            @include blur-circles(100px, #F54E4EF2, 3rem);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
     }
 
     .about {
         &__right-section {
             background-color: #abdbdb;
             @include flex-center(center, center);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     }
 

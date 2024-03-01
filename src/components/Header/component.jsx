@@ -1,7 +1,7 @@
 import ThemeToggleBtn from './components/ThemeToggleBtn';
 import Navigation from './components/Navigation';
 
-import logo from '../../assets/SB.svg';
+import logo from '../../assets/SB.png';
 
 export default function Header() {
     return (

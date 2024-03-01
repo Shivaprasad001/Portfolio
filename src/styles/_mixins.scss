@@ -11,3 +11,12 @@
     height: $radius;
     width: $radius;
 }
+
+@mixin blur-circles($radius, $fillColor, $blurValue) {
+    background-color: $fillColor;
+    border-radius: 50%;
+    display: block;
+    height: $radius;
+    width: $radius;
+    filter: blur($blurValue);
+}
