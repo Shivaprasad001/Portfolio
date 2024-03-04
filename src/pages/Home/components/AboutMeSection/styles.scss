@@ -4,6 +4,7 @@
     display: flex;
     position: relative;
     padding-bottom: 0;
+    overflow: hidden;
 
     .half-section {
         flex: 1;
@@ -73,7 +74,7 @@
         }
 
         .blurred-circle {
-            @include blur-circles(100px, #F54E4EF2, 3rem);
+            @include blur-circles(50px, #F54E4EF2, 3rem);
             position: absolute;
             left: 0;
             bottom: 0;

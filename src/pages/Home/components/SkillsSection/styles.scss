@@ -1,0 +1,13 @@
+.skills-list-section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .skills-list-wrapper {
+        width: 100%;
+        
+        &:first-child, &:nth-child(2) {
+            width: 49%;
+        }
+    }
+}
