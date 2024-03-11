@@ -1,0 +1,105 @@
+@import '../../../../styles/variables';
+
+.home-page__recommendations {
+    position: relative;
+    overflow: hidden;
+    .two-circles-pattern {
+        position: absolute;
+        display: inline-block;
+        top: -75px;
+        right: -75px;
+        .big-circle {
+            display: block;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 30px solid rgba(253, 178, 178, 0.3); 
+        }
+
+        .small-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color:  rgba(253, 178, 178, 0.3); 
+        }
+    }
+
+    .recommendations-list-wrapper {
+        margin-top: 20px;
+    }
+
+    .recommendation-item {
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        position: relative;
+        padding: 100px 25px 65px 25px;
+        margin-top: 50px;
+        box-shadow: 0px 0px 5px #d3d3d3;
+        margin-right: 15px;
+
+        .quote-icon {
+            width: 30px;
+            position: absolute;
+            top: 55px;
+            left: 25px;
+        }
+
+        .circle-pattern {
+            border-radius: 50%;
+            width: 43px;
+            height: 43px;
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            border: 8px solid rgba(253, 178, 178, 0.3);
+        }
+
+        .name-letter {
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid #f8f8f8;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-family: $secondary-font;
+            font-size: 36px;
+            top: -40px;
+            box-shadow: 0px 0px 5px #d3d3d3;
+            left: calc(50% - 40px);
+            color: $primary-orange;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 24px;
+            font-family: $primary-font;
+        }
+
+        .author-details {
+            position: absolute;
+            bottom: 25px;
+
+            .name {
+                font-family: $secondary-font;
+                color: $text-black;
+                margin-bottom: 5px;
+            }
+
+            .designation {
+                color: $text-grey;
+                font-size: 14px;
+            }
+        }
+    }
+}

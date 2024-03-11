@@ -6,7 +6,7 @@ import { SKILLS } from './constants';
 export default function SkillsSection() {
     return(
         <section className="home-page__skills section-horizontal-padding section-vertical-padding">
-            <SectionTitle title="My Skills" subTitle="Keep Learning"/>
+            <SectionTitle title="My Skills" sideTitle="Keep Learning"/>
             <div className='skills-list-section-wrapper'>
                 <SkillsList skills={SKILLS.languages} legend="<Languages/>"/>           
                 <SkillsList skills={SKILLS.libraries} legend="<Libraries & Frameworks/>"/>           

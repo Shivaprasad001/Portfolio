@@ -7,6 +7,18 @@
         color: $text-black;
     }
 
+    .side-title {
+        font-family: $handdrawn-font;
+        color: #f3f3f3;
+        font-size: 25px;
+    }
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .border-pattern {
         display: flex;
 

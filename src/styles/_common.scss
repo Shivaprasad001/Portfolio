@@ -15,3 +15,51 @@
     padding-left: 40px;
     padding-right: 40px;
 }
+
+.sb-btn {
+    height: 44px;
+    background-color: transparent;
+    border: 2px solid #F54E4E;
+    color: #F54E4E;
+    padding: 0 20px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 6px;
+    cursor: pointer; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    span {
+        z-index: 1;
+        transition: color 0.8s ease;
+    }
+
+    &::before {
+        content: "";
+        background-color: #F54E4E;
+        display: block;
+        position: absolute;
+        z-index: 0;
+        height: 0;
+        width: 0;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        z-index: 0;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 10px #b7b7b7;
+        &::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        span {
+            color: white;
+        }
+    }
+}

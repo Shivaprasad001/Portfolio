@@ -8,7 +8,7 @@ export default function SkillsList(props) {
                 <ul className='skills-list'>
                     {props.skills.map((skill) => {
                         return(<li key={skill.name} className='skills-item'>
-                            <img src={skill.icon} className='skill-img'/>
+                            <img src={skill.icon} className='skill-img' width={skill.imgWidth}/>
                             <span className='skill-name'>{skill.name}</span>
                         </li>)
                     })}

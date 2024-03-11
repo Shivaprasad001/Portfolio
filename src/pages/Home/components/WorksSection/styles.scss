@@ -1,0 +1,82 @@
+@import '../../../../styles/variables';
+.home-page__projects {
+    .projects-slider-wrapper {
+        margin-top: 30px;
+
+        .projects-slide-item {
+            margin: 0 10px;
+            border: 2px solid #EFEFEF;
+            padding: 15px 15px 50px 15px;
+            border-radius: 6px;
+            height: 100%;
+            position: relative;
+            .slide {
+                figure {
+                    height: 240px;
+                    background-size: cover !important;
+                    background-position: center !important;
+                }
+
+                .project-title {
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    font-family: $secondary-font;
+                }
+
+                .description {
+                    color: $text-grey;
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
+
+                .tech-stack {
+                    margin-bottom: 10px;
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+
+                .actions {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 40px;
+                    position: absolute;
+                    width: calc(100% - 30px);
+                    bottom: 15px;
+                    left: 15px;
+                    a {
+                        cursor: pointer;
+                    }
+
+                    .project-github-icon {
+                        transition: all 0.5s ease;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        display: inline-flex;
+                        padding: 5px;
+                        justify-content: center;
+                        img {
+                            width: 100%;
+                        }
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .project-preview-link {
+                        height: 40px;
+                        flex: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
