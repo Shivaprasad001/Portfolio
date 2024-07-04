@@ -1,3 +1,10 @@
+.home-page__skills {
+    .skills-section-title {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
 .skills-list-section-wrapper {
     display: flex;
     flex-wrap: wrap;

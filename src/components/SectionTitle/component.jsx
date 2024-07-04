@@ -1,6 +1,7 @@
 export default function SectionTitle(props) {
+    const sectionClasses = props.customClass ? `section-title ${props.customClass}`: 'section-title';
     return (
-        <div className="section-title">
+        <div className={sectionClasses}>
             <div className="section-title__header-wrapper">
                 <h2 className="title">{props.title}</h2>
                 <span className="side-title">{props.sideTitle}</span>

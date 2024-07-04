@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function AboutSection() {
 
     useEffect(()=> {
-        const sectionTitle = document.querySelector('.section-title');
+        const sectionTitle = document.querySelector('.about-section-title');
         const slideInItems = document.querySelectorAll('.slide-in-with-fade');
         const rigthSection = document.querySelector('.about__right-section');
 
@@ -19,7 +19,7 @@ export default function AboutSection() {
             scrollTrigger: {
                 trigger: '.home-page__about',
                 start: 'top 80%',
-                markers: true,
+                // markers: true,
                 toggleActions: "restart none none reverse"
             },
             ...SWIPE_UP_FADE_IN_EFFECT
@@ -29,7 +29,7 @@ export default function AboutSection() {
             scrollTrigger: {
                 trigger: '.home-page__about',
                 start: 'top 80%',
-                markers: true,
+                // markers: true,
                 toggleActions: "restart none none reverse"
             },
             ...SWIPE_UP_FADE_IN_EFFECT
@@ -39,7 +39,7 @@ export default function AboutSection() {
             scrollTrigger: {
                 trigger: '.home-page__about',
                 start: 'top 80%',
-                markers: true,
+                // markers: true,
                 toggleActions: "restart none none reverse"
             },
             ...SLIDE_IN_FROM_RIGHT,
@@ -54,7 +54,7 @@ export default function AboutSection() {
     return (
         <section className="home-page__about">
             <div className="about__left-section half-section section-vertical-padding section-horizontal-padding">
-                <SectionTitle title="About Me"/>
+                <SectionTitle title="About Me" customClass="about-section-title"/>
                 <div className="section-content">
                     <h3 className="slide-in-with-fade">Hi there,</h3>
                     <h3 className="slide-in-with-fade">I am Shivprasad Babu,</h3>

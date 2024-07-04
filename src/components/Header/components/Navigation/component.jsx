@@ -15,6 +15,9 @@ export default function Navigation() {
                     <a>Projects</a>
                 </li>
                 <li>
+                    <a>Designs</a>
+                </li>
+                <li>
                     <a>Contact</a>
                 </li>
             </ul>
