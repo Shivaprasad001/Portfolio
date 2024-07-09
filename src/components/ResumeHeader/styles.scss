@@ -1,0 +1,35 @@
+.resume-header {
+  background-color: #f3f3f3;
+  padding: 15px 0 15px 60px;
+  width: calc(100% + 30px);
+  transform: translateX(-30px);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #d9d9d9;
+    position: absolute;
+    left: 2px;
+    bottom: -17px;
+    transform: rotate(44deg);
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+
+    .header-icon-wrapper {
+      margin-right: 7px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+  }
+}

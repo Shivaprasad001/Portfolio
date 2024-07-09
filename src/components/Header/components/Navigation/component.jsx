@@ -1,25 +1,23 @@
+import { NavLink } from "react-router-dom";
+import { MAIN_MENU } from "./constants";
+
 export default function Navigation() {
     return (
         <nav className="main-navigation">
             <ul>
-                <li>
-                    <a>Home</a>
-                </li>
-                <li>
-                    <a>About</a>
-                </li>
-                <li>
-                    <a>Resume</a>
-                </li>
-                <li>
-                    <a>Projects</a>
-                </li>
-                <li>
-                    <a>Designs</a>
-                </li>
-                <li>
-                    <a>Contact</a>
-                </li>
+                {MAIN_MENU.map(menuItem => {
+                    return(
+                        <li key={menuItem.id}>
+                            <NavLink
+                                to={menuItem.path}
+                                className={({isActive}) => (isActive ? "active main-nav-link" : "main-nav-link")}
+                                end
+                            >
+                                {menuItem.menuText}
+                            </NavLink>
+                        </li>
+                    )
+                })}
             </ul>
         </nav>
     )

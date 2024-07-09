@@ -1,0 +1,126 @@
+@import '../../../../styles/variables';
+
+.experience-section-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+
+    li {
+        position: relative;
+        margin-bottom: 15px;
+
+        .experience-card-wrapper {
+            width: 330px;
+            opacity: 0;
+            transition: all ease 0.8s;
+            
+            &::before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #E8E8E8;
+                position: absolute;
+            }
+
+            &.right {
+                transform: translateX(230px);
+
+                &::before {
+                    transform: rotate(270deg);
+                    left: -40px;
+                    top: calc(50% - 10px);
+                }
+            }
+
+            &.left {
+                transform: translateX(-230px);
+
+                &::before {
+                    transform: rotate(-270deg);
+                    right: -40px;
+                    top: calc(50% - 10px);
+                }
+            }
+
+            
+        }
+
+        .experience-content {
+            opacity: 0;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 3px solid $primary-orange;
+            background-color: white;
+            position: absolute;
+            left: calc(50% - 7.5px);
+            top: 50%;
+            margin-top: -5px;
+            z-index: 1;
+            opacity: 0;
+            transition: all ease 0.5s;
+            transition-delay: 0.4s;
+        }
+
+        &::after {
+            content: '';
+            width: 5px;
+            background-color: $primary-orange;
+            display: block;
+            left: calc(50% - 2.5px);
+            top: 0;
+            position: absolute;
+            height: 0;
+            transition: all ease 1s;
+            transition-timing-function: linear;
+        }
+
+        &:first-child {
+            &::after {
+                // height: calc(50% + 20px);
+                // top: 50%;
+            }
+        }
+
+        &:last-child {
+            &::after {
+                // height: 50%;
+            }
+        }
+
+        &.show {
+            opacity: 1;
+
+            .experience-content {
+                opacity: 1;
+            }
+            
+            &::before {
+                opacity: 1;
+            }
+            &::after {
+                height: calc(100% + 20px);
+            }
+
+            .experience-card-wrapper {
+                opacity: 1;
+                &.left {
+                    transform: translateX(-210px);
+                }
+
+                &.right {
+                    transform: translateX(210px);
+                }
+            }
+        }
+    }
+}
