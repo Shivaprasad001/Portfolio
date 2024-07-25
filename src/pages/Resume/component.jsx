@@ -4,6 +4,7 @@ import ResumeHeader from "../../components/ResumeHeader";
 import SkillCard from "../../components/SkillCard";
 import IntroSection from "./components/IntroSection";
 import ExperienceSection from "./components/ExperienceSection";
+import ProjectsSection from "./components/ProjectsSection";
 import userIcon from "../../assets/icons/user.svg";
 import skillsIcon from "../../assets/icons/Skills.svg";
 import experienceIcon from "../../assets/icons/Layers.svg";
@@ -11,13 +12,17 @@ import projectsIcon from "../../assets/icons/Flag.svg";
 import educationIcon from "../../assets/icons/Book.svg";
 import linksIcon from "../../assets/icons/Out.svg";
 import { RESUME_DETAILS } from "./constants";
+import EducationSection from "./components/EducationSection";
 
 export default function ResumePage() {
   const experienceSectionRef = useRef();
+  const educationSectionRef = useRef();
   const [isExperienceSectionVisible, setIsExperienceSectionVisible] =
     useState(false);
+
+  const [isEducationSectionVisible, setIsEducationSectionVisible] = useState(false);
+  
   useEffect(() => {
-    console.log(experienceSectionRef);
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setIsExperienceSectionVisible(entry.isIntersecting);
@@ -25,6 +30,16 @@ export default function ResumePage() {
 
     observer.observe(experienceSectionRef.current);
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsEducationSectionVisible(entry.isIntersecting);
+    });
+    observer.observe(educationSectionRef.current);
+  }, []);
+
+
   return (
     <section className="resume-page">
       <div className="resume-content">
@@ -63,9 +78,11 @@ export default function ResumePage() {
         </div>
         <div className="projects-section">
           <ResumeHeader title="Projects" icon={projectsIcon} />
+          <ProjectsSection/>
         </div>
-        <div className="education-section">
+        <div className="education-section" ref={educationSectionRef}>
           <ResumeHeader title="Education" icon={educationIcon} />
+          <EducationSection isVisible={isEducationSectionVisible}/>
         </div>
         <div className="links-section">
           <ResumeHeader title="Links" icon={linksIcon} />
