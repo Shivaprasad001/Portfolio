@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "../../../../components/SectionTitle";
 import CodingImage from "../../../../assets/home/coding-animated.svg";
+import {useGSAP} from '@gsap/react';
 
 import {SWIPE_UP_FADE_IN_EFFECT, SLIDE_IN_FROM_RIGHT} from '../../constants';
 
@@ -10,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
 
-    useEffect(()=> {
+    useGSAP(()=> {
         const sectionTitle = document.querySelector('.about-section-title');
         const slideInItems = document.querySelectorAll('.slide-in-with-fade');
         const rigthSection = document.querySelector('.about__right-section');
@@ -44,7 +45,7 @@ export default function AboutSection() {
             },
             ...SLIDE_IN_FROM_RIGHT,
         })
-    },[]);
+    });
 
 
     function onDownloadCVButtonClick() {

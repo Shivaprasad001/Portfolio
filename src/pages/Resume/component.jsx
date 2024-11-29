@@ -13,6 +13,7 @@ import educationIcon from "../../assets/icons/Book.svg";
 import linksIcon from "../../assets/icons/Out.svg";
 import { RESUME_DETAILS } from "./constants";
 import EducationSection from "./components/EducationSection";
+import LinksSection from "./components/LinksSection";
 
 export default function ResumePage() {
   const experienceSectionRef = useRef();
@@ -86,6 +87,7 @@ export default function ResumePage() {
         </div>
         <div className="links-section">
           <ResumeHeader title="Links" icon={linksIcon} />
+          <LinksSection/>
         </div>
       </div>
     </section>

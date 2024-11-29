@@ -47,6 +47,13 @@
                 display: flex;
                 justify-content: end;
                 padding-right: 40px;
+                margin-top: 10px;
+
+                @media(max-width: $ipad-portrait) {
+                    padding-right: 0;
+                    margin-top: 20px;
+                    justify-content: flex-start;
+                }
             }
 
             .about-section-tile {
@@ -57,9 +64,15 @@
                 height: 107px;
                 width: 137px;
                 box-shadow: 0px 0px 10px rgba(230, 230, 230, 0.5);
-
+                @media(max-width: $mobile-landscape) {
+                    height: 90px;
+                    width: 132px;
+                }
                 &:first-child {
                     margin-right: 30px;
+                    @media(max-width: $mobile-landscape) {
+                        margin-right: 15px;
+                    }
                 }
 
                 .tile-count {
@@ -67,6 +80,9 @@
                     color: $primary-orange;
                     display: block;
                     text-align: center;
+                    @media(max-width: $mobile-landscape) { 
+                        font-size: 35px;
+                    }
                 }
 
                 .tile-label {
@@ -95,6 +111,10 @@
             background-size: contain;
             opacity: 0;
             transform: translateX(10%);
+
+            @media(max-width: $ipad-portrait) {
+                display: none;
+            }
         }
     }
 

@@ -3,5 +3,6 @@ export const MAIN_MENU = [
     {id: 101, menuText: 'Resume', path: '/resume'},
     {id: 102, menuText: 'Projects', path: '/projects'},
     {id: 103, menuText: 'Designs', path: '/designs'},
-    {id: 104, menuText: 'Contact', path: '/contact'}
+    {id: 105, menuText: 'Services', path: '/services'},
+    {id: 104, menuText: 'Contact', path: '/contact'},
 ]

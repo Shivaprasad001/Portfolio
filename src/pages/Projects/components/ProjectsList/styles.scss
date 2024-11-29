@@ -1,0 +1,13 @@
+.projects-page {
+    &__projects-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__project-card {
+        width: 30%;
+        margin: 1%;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}

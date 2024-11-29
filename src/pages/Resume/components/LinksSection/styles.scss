@@ -1,0 +1,21 @@
+@import '../../../../styles/variables';
+
+.link-section-wrapper {
+    padding: 30px;
+
+    .website-links {
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            img {
+                margin-right: 8px;
+            }
+
+            a {
+                color: $text-black;
+            }
+        }
+    }
+}

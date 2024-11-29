@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.inner-page-banner {
+    background-color: $banner-bg-blue;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        max-width: $content-max-width;
+    }
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        font-size: 68px;
+        letter-spacing: 30px;
+
+        span {
+            text-shadow: 0 4px 4px rgba(87,87,87,0.35);
+            display: inline-block;
+        }
+    }
+}

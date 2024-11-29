@@ -16,7 +16,7 @@ export default function SkillsSection() {
             scrollTrigger: {
                 trigger: '.home-page__skills',
                 start: 'top 80%',
-                markers: true,
+                // markers: true,
                 toggleActions: "restart none none reverse"
             },
             ...SWIPE_UP_FADE_IN_EFFECT

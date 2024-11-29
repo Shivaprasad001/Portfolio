@@ -72,6 +72,93 @@ export default function WorksSection() {
                             </div>
                         </div>
                     </div>
+                    <div className='projects-slide-item'>
+                        <div className='slide'>
+                            <figure style={{background: `url(${Image})`}} className='project-img'>
+                            </figure>
+                            <h3 className='project-title'>Project Title</h3>
+                            <div className='tech-stack'>
+                                <ul>
+                                    <li>
+                                        <Capsule name="HTML" bgColor="#B3B3B3"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="JavaScript" bgColor="#EB9090"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="CSS3" bgColor="#277E79"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='description'>
+                                <p>It is a long established fact that a reader. </p>
+                            </div>
+                            <div className='actions'>
+                                <a className='project-github-icon'>
+                                    <img src={GitIcon} alt='GIT Icon'/>
+                                    </a>
+                                <a className='project-preview-link sb-btn'><span>Preview</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='projects-slide-item'>
+                        <div className='slide'>
+                            <figure style={{background: `url(${Image})`}} className='project-img'>
+                            </figure>
+                            <h3 className='project-title'>Project Title</h3>
+                            <div className='tech-stack'>
+                                <ul>
+                                    <li>
+                                        <Capsule name="HTML" bgColor="#B3B3B3"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="JavaScript" bgColor="#EB9090"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="CSS3" bgColor="#277E79"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='description'>
+                                <p>It is a long established fact that a reader. </p>
+                            </div>
+                            <div className='actions'>
+                                <a className='project-github-icon'>
+                                    <img src={GitIcon} alt='GIT Icon'/>
+                                    </a>
+                                <a className='project-preview-link sb-btn'><span>Preview</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='projects-slide-item'>
+                        <div className='slide'>
+                            <figure style={{background: `url(${Image})`}} className='project-img'>
+                            </figure>
+                            <h3 className='project-title'>Project Title</h3>
+                            <div className='tech-stack'>
+                                <ul>
+                                    <li>
+                                        <Capsule name="HTML" bgColor="#B3B3B3"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="JavaScript" bgColor="#EB9090"/>
+                                    </li>
+                                    <li>
+                                        <Capsule name="CSS3" bgColor="#277E79"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='description'>
+                                <p>It is a long established fact that a reader. </p>
+                            </div>
+                            <div className='actions'>
+                                <a className='project-github-icon'>
+                                    <img src={GitIcon} alt='GIT Icon'/>
+                                    </a>
+                                <a className='project-preview-link sb-btn'><span>Preview</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </Carousel>
             </div>
         </section>

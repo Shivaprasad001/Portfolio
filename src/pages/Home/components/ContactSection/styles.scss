@@ -10,6 +10,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @media(max-width: $ipad-portrait) {
+                margin-top: 30px;
+            }
 
             ul {
                 li {
@@ -55,6 +58,9 @@
     .bg-pattern {
         width: 30%;
         position: relative;
+        @media(max-width: $mobile-landscape) {
+            display: none;
+        }
 
         .pattern {
             width: 100%;
@@ -62,6 +68,19 @@
             background-size: auto !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
+
+            @media(max-width: $ipad-portrait) {
+                background-size: contain !important;
+            }
+        }
+    }
+
+    .contact-feature-img {
+        svg {
+            max-width: 100%;
+            @media(max-width: $ipad-portrait) {
+                display: none;
+            }
         }
     }
 }

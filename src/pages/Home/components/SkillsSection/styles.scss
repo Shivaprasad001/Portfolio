@@ -1,3 +1,5 @@
+@import '../../../../styles/variables';
+
 .home-page__skills {
     .skills-section-title {
         opacity: 0;
@@ -15,6 +17,10 @@
         
         &:first-child, &:nth-child(2) {
             width: 49%;
+
+            @media(max-width: $ipad-portrait) {
+                width: 100%;
+            }
         }
     }
 }

@@ -1,12 +1,30 @@
 @import '../../../../styles/variables';
 .main-navigation {
-    ul {
-       display: flex;
-       list-style: none; 
+    @media(max-width: $ipad-portrait) {
 
+        display: none;
+        &.open {
+            background-color: rgb(32, 32, 32);
+            position: fixed;
+            display: flex;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            top: 60px;
+        }
+    }
+    ul {
+       @media(min-width: $min-ipad-portrait) {
+            display: flex;
+            list-style: none; 
+       } 
+      
        li {
             margin-right: 24px;
-
             a {
                 color: #171717;
                 font-weight: 500;
@@ -22,6 +40,17 @@
                     text-decoration: underline;
                 }
             }
+
+            @media(max-width: $ipad-portrait) {
+                text-align: center;
+                margin-bottom: 10px;
+
+                a {
+                    color: white;
+                }
+            }
+
+            
        }
     }
 }

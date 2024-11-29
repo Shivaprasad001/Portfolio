@@ -2,12 +2,18 @@
 
 .skills-list-wrapper {
     margin-top: 30px;
+    @media(max-width: $ipad-portrait) {
+        margin-top: 15px;
+    }
 
     .skills-list-fieldset {
         border: 1px dashed #b6b6b6;
         background-color: #f3f3f366; 
         border-radius: 4px;
         padding: 15px 20px 20px 20px;
+        @media(max-width: $ipad-portrait) {
+            padding: 12px 12px 12px 12px;
+        }
 
         legend {
             margin-left: 5px;
@@ -33,17 +39,29 @@
                 justify-content: center;
                 position: relative;
                 padding-bottom: 30px;
+                @media(max-width: $ipad-portrait) {
+                    width: auto;
+                    height: auto;
+                    padding: 5px 15px;
+                    margin: 7px;
+                }
 
                 .skill-img {
                     max-width: 60%;
+
+                    @media(max-width: $ipad-portrait) {
+                        display: none;
+                    }
                 }
 
                 .skill-name {
-                    display: block;
-                    width: 100%;
-                    position: absolute;
-                    bottom: 10px;
                     font-size: 14px;
+                    @media(min-width: $min-ipad-portrait) {
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 10px;
+                    }
                 }
             }
         }

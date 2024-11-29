@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import {useGSAP} from '@gsap/react';
 
 import linkedIn from '../../../../assets/icons/linkedin.png';
 import gmail from '../../../../assets/icons/gmail.png';
@@ -9,7 +10,7 @@ import profilePic from '../../../../assets/profile-img-whitebg.jpg';
 import { TECH_ICONS, FADE_IN_WITH_SCALE_EFFECT, SWIPE_UP_FADE_IN_EFFECT } from './constants';
 
 export default function BannerSection() {
-    useEffect(() => {
+    useGSAP(() => {
         const icons = document.querySelectorAll('.tech-icon');
         const decorCircles = document.querySelectorAll('.banner-filler-circle');
         const profilePicture = document.querySelector('.profile-picture');
@@ -23,7 +24,7 @@ export default function BannerSection() {
         tl.to(icons, FADE_IN_WITH_SCALE_EFFECT, "-=1");
         tl.to(decorCircles, FADE_IN_WITH_SCALE_EFFECT, "-=2");
 
-    }, []);
+    });
     return (
         <section className="home-page__banner">
             <div className="background-text-wrapper">
